@@ -1,0 +1,36 @@
+body {
+    margin: 0; padding: 0;
+    background: radial-gradient(circle, #000 0%, #110 70%, #220 100%);
+    display: flex; justify-content: center; align-items: center;
+    min-height: 100vh; font-family: 'Courier New', monospace;
+    overflow: hidden; user-select: none;
+}
+
+#gameCanvas {
+    border: 3px solid #660; box-shadow: 0 0 30px rgba(255,0,0,0.5), inset 0 0 20px rgba(0,0,0,0.8);
+    cursor: crosshair;
+}
+
+#ui {
+    position: absolute; top: 20px; left: 20px;
+    color: #f00; text-shadow: 0 0 10px #f00, 0 0 20px #f00;
+    font-size: 20px; font-weight: bold;
+}
+
+#message {
+    margin-top: 10px; font-size: 16px; opacity: 0.9;
+    animation: flicker 2s infinite;
+}
+
+@keyframes flicker {
+    0%, 100% { opacity: 0.9; } 50% { opacity: 0.4; }
+}
+
+#replayBtn {
+    margin-top: 15px; padding: 10px 16px; font-size: 18px; font-weight: bold;
+    color: #f00; background: transparent; border: 2px solid #f00;
+    border-radius: 8px; cursor: pointer; filter: drop-shadow(0 0 5px #f00);
+    transition: all 0.3s;
+}
+
+#replayBtn:hover { background-color: #f00; color: black; }
